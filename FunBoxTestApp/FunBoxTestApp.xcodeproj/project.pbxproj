@@ -20,6 +20,7 @@
 		B5C7714322773FFC00B537C2 /* Devices.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C7714222773FFC00B537C2 /* Devices.json */; };
 		B5C77145227742B500B537C2 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C77144227742B500B537C2 /* DeviceModel.swift */; };
 		B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C77146227744B000B537C2 /* ParseDataDevice.swift */; };
+		B5EBC06222788E45003372E0 /* StoreFrontTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EBC06122788E45003372E0 /* StoreFrontTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B5C7714222773FFC00B537C2 /* Devices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Devices.json; sourceTree = "<group>"; };
 		B5C77144227742B500B537C2 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 		B5C77146227744B000B537C2 /* ParseDataDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseDataDevice.swift; sourceTree = "<group>"; };
+		B5EBC06122788E45003372E0 /* StoreFrontTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFrontTableViewDelegate.swift; sourceTree = "<group>"; };
 		DF7164CDCF6FE82EFBCBBA75 /* Pods-FunBoxTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBoxTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FunBoxTestApp/Pods-FunBoxTestApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				B556D28E22723DDA006073BD /* StoreFrontTableViewDataSource.swift */,
+				B5EBC06122788E45003372E0 /* StoreFrontTableViewDelegate.swift */,
 				B50A190622765E8E0061F747 /* Cell's */,
 			);
 			path = StoreFrontTableView;
@@ -281,6 +284,7 @@
 				B556D27D227234F8006073BD /* StoreFrontViewController.swift in Sources */,
 				B556D28D22723B20006073BD /* StoreFrontView.swift in Sources */,
 				B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */,
+				B5EBC06222788E45003372E0 /* StoreFrontTableViewDelegate.swift in Sources */,
 				B556D27B227234F8006073BD /* AppDelegate.swift in Sources */,
 				B50A190A227665D80061F747 /* CountTableViewCell.swift in Sources */,
 				B5C77145227742B500B537C2 /* DeviceModel.swift in Sources */,
