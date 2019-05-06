@@ -45,8 +45,8 @@ class StoreFrontViewController: UIViewController {
     
 }
 
-extension StoreFrontViewController: StoreDelegate {
-    func backEndButtonDidPressed(button: UIButton) {
+extension StoreFrontViewController: ButtonDelegate {
+    func buttonDidPressed(button: UIButton) {
         navigationController?.pushViewController(backEndVC, animated: true)
     }
     

@@ -8,6 +8,6 @@
 
 import UIKit
 
-@objc protocol StoreDelegate {
-    @objc func backEndButtonDidPressed(button: UIButton)
+@objc protocol ButtonDelegate {
+    @objc func buttonDidPressed(button: UIButton)
 }

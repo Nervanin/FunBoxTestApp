@@ -22,7 +22,7 @@ class StoreFrontView: UIView {
     var backEndButton = UIButton()
     
     //delegate's
-    var delegate: StoreDelegate!
+    var delegate: ButtonDelegate!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,8 +46,8 @@ class StoreFrontView: UIView {
         tableView.register(ModelLabelTableViewCell.self, forCellReuseIdentifier: tableViewDataSourcee.modellabelTableCellId)
     }
     
-    @objc func buttonPress(button:UIButton) {
-        delegate.backEndButtonDidPressed(button: backEndButton)
+    @objc func buttonPress(button: UIButton) {
+        delegate.buttonDidPressed(button: backEndButton)
     }
     
     func setUpButtons() {

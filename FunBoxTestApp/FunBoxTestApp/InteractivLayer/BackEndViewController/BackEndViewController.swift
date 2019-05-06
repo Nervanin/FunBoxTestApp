@@ -11,10 +11,10 @@ import UIKit
 class BackEndViewController: UIViewController {
     
     //var backEndView = BackEndView()
-    
+    lazy var storeFrontViewController = StoreFrontViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addBackObject()
         view.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
     }
     
@@ -24,6 +24,13 @@ class BackEndViewController: UIViewController {
     
     func addBackObject() {
         let backEndView = BackEndView(frame: view.frame)
+        backEndView.delegate = self
         self.view.addSubview(backEndView)
+    }
+}
+
+extension BackEndViewController: ButtonDelegate {
+    func buttonDidPressed(button: UIButton) {
+        navigationController?.pushViewController(storeFrontViewController, animated: true)
     }
 }

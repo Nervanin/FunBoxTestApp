@@ -9,7 +9,7 @@
 import UIKit
 
 class BackEndTableViewDataSource: NSObject  {
-    
+    let backEndCellId = "BackEndCellId"
 }
 
 extension BackEndTableViewDataSource: UITableViewDataSource {
