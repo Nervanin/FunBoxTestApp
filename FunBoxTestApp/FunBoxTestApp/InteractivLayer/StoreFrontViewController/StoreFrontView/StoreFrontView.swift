@@ -9,23 +9,27 @@
 import UIKit
 import SnapKit
 
-class StroreFrontView: UIView {
+class StoreFrontView: UIView {
     
-    //tableView
+    
+    //tableView and tableVeiwDelegate/tableViewDataSoursce
     var tableView = UITableView()
-    var tableViewDataSoutrse = StoreFrontTableViewDataSource()
+    var tableViewDataSourcee = StoreFrontTableViewDataSource()
     var tableViewDelegate = StoreFrontTableViewDelegate()
     //buttons
     var saveButton = UIButton()
     var storeFrontButton = UIButton()
     var backEndButton = UIButton()
     
+    //delegate's
+    var delegate: StoreDelegate!
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         setUpTableView(frame: frame)
         setUpButtons()
-        
+      
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -35,11 +39,15 @@ class StroreFrontView: UIView {
     func setUpTableView(frame: CGRect) {
         //set TableView
         tableView = UITableView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height / 1.5), style: .plain)
-        tableView.dataSource = tableViewDataSoutrse
+        tableView.dataSource = tableViewDataSourcee
         tableView.delegate = tableViewDelegate
         self.addSubview(tableView)
         
-        tableView.register(ModelLabelTableViewCell.self, forCellReuseIdentifier: tableViewDataSoutrse.modellabelTableCellId)
+        tableView.register(ModelLabelTableViewCell.self, forCellReuseIdentifier: tableViewDataSourcee.modellabelTableCellId)
+    }
+    
+    @objc func buttonPress(button:UIButton) {
+        delegate.backEndButtonDidPressed(button: backEndButton)
     }
     
     func setUpButtons() {
@@ -58,8 +66,17 @@ class StroreFrontView: UIView {
         storeFrontButton.layer.borderWidth = 3
         storeFrontButton.setTitle("Store-Front", for: .normal)
         
+        //set backEndButton
+        self.addSubview(backEndButton)
+        backEndButton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        backEndButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        backEndButton.layer.borderWidth = 3
+        backEndButton.setTitle("Back-End", for: .normal)
+        
         
         setConstraints()
+        
+        backEndButton.addTarget(self, action: #selector(buttonPress), for: .touchUpInside)
     }
     
     func setConstraints() {
@@ -71,11 +88,26 @@ class StroreFrontView: UIView {
         }
         
         storeFrontButton.snp.makeConstraints { (make) in
-            make.left.equalTo(8)
-            make.bottom.equalTo(16)
-          //  make.height.equalTo(self.frame)
-            
+            make.left.equalTo(0)
+            make.bottom.equalTo(0)
+            make.width.equalTo(187.5)
+            make.height.equalTo(75)
+        }
+        
+        backEndButton.snp.makeConstraints { (make) in
+            make.left.equalTo(storeFrontButton.snp.right)
+            make.bottom.equalTo(0)
+            make.width.equalTo(187.5)
+            make.height.equalTo(75)
         }
     }
+    
+//    @objc func backEndButtonDidPressed(_ sender: UIButton) {
+//        let backEndViewController = BackEndViewController()
+//        let navigationController = UINavigationController()
+//        if sender == backEndButton {
+//        navigationController.pushViewController(backEndViewController, animated: true)
+//        }
+//    }
 }
 
