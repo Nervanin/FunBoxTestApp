@@ -23,7 +23,6 @@
 		B5C7714322773FFC00B537C2 /* Devices.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C7714222773FFC00B537C2 /* Devices.json */; };
 		B5C77145227742B500B537C2 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C77144227742B500B537C2 /* DeviceModel.swift */; };
 		B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C77146227744B000B537C2 /* ParseDataDevice.swift */; };
-		B5CEBB512280EA3A00FC9AF9 /* BackEndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CEBB502280EA3A00FC9AF9 /* BackEndDelegate.swift */; };
 		B5E68E55227F1EDF00AAFBCD /* BackEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E68E54227F1EDF00AAFBCD /* BackEndViewController.swift */; };
 		B5E68E58227F4D0F00AAFBCD /* ButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E68E57227F4D0F00AAFBCD /* ButtonDelegate.swift */; };
 		B5EBC06222788E45003372E0 /* StoreFrontTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EBC06122788E45003372E0 /* StoreFrontTableViewDelegate.swift */; };
@@ -49,7 +48,6 @@
 		B5C7714222773FFC00B537C2 /* Devices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Devices.json; sourceTree = "<group>"; };
 		B5C77144227742B500B537C2 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 		B5C77146227744B000B537C2 /* ParseDataDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseDataDevice.swift; sourceTree = "<group>"; };
-		B5CEBB502280EA3A00FC9AF9 /* BackEndDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndDelegate.swift; sourceTree = "<group>"; };
 		B5E68E54227F1EDF00AAFBCD /* BackEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndViewController.swift; sourceTree = "<group>"; };
 		B5E68E57227F4D0F00AAFBCD /* ButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDelegate.swift; sourceTree = "<group>"; };
 		B5EBC06122788E45003372E0 /* StoreFrontTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFrontTableViewDelegate.swift; sourceTree = "<group>"; };
@@ -102,7 +100,7 @@
 			children = (
 				B5E68E54227F1EDF00AAFBCD /* BackEndViewController.swift */,
 				B55307C522807B7D00C7EBC9 /* BackEndView */,
-				B55307C82280DDCE00C7EBC9 /* BackEndTableView */,
+				B55307C82280DDCE00C7EBC9 /* TableViewDelegateDataSource */,
 			);
 			path = BackEndViewController;
 			sourceTree = "<group>";
@@ -115,13 +113,13 @@
 			path = BackEndView;
 			sourceTree = "<group>";
 		};
-		B55307C82280DDCE00C7EBC9 /* BackEndTableView */ = {
+		B55307C82280DDCE00C7EBC9 /* TableViewDelegateDataSource */ = {
 			isa = PBXGroup;
 			children = (
 				B55307C62280DDBB00C7EBC9 /* BackEndTableViewDataSource.swift */,
 				B55307C92280DE6700C7EBC9 /* BackEndTableViewDelegate.swift */,
 			);
-			path = BackEndTableView;
+			path = TableViewDelegateDataSource;
 			sourceTree = "<group>";
 		};
 		B556D26E227234F8006073BD = {
@@ -161,19 +159,19 @@
 			children = (
 				B556D27C227234F8006073BD /* StoreFrontViewController.swift */,
 				B5C7714A2277B5BC00B537C2 /* StoreFrontView */,
-				B5C771492277B59B00B537C2 /* StoreFrontTableView */,
+				B5C771492277B59B00B537C2 /* TableViewDelegateDataSource */,
 			);
 			path = StoreFrontViewController;
 			sourceTree = "<group>";
 		};
-		B5C771492277B59B00B537C2 /* StoreFrontTableView */ = {
+		B5C771492277B59B00B537C2 /* TableViewDelegateDataSource */ = {
 			isa = PBXGroup;
 			children = (
 				B556D28E22723DDA006073BD /* StoreFrontTableViewDataSource.swift */,
 				B5EBC06122788E45003372E0 /* StoreFrontTableViewDelegate.swift */,
 				B50A190622765E8E0061F747 /* Cell's */,
 			);
-			path = StoreFrontTableView;
+			path = TableViewDelegateDataSource;
 			sourceTree = "<group>";
 		};
 		B5C7714A2277B5BC00B537C2 /* StoreFrontView */ = {
@@ -205,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				B5E68E57227F4D0F00AAFBCD /* ButtonDelegate.swift */,
-				B5CEBB502280EA3A00FC9AF9 /* BackEndDelegate.swift */,
 			);
 			path = "Service Layer";
 			sourceTree = "<group>";
@@ -333,7 +330,6 @@
 				B556D28F22723DDA006073BD /* StoreFrontTableViewDataSource.swift in Sources */,
 				B556D27D227234F8006073BD /* StoreFrontViewController.swift in Sources */,
 				B556D28D22723B20006073BD /* StoreFrontView.swift in Sources */,
-				B5CEBB512280EA3A00FC9AF9 /* BackEndDelegate.swift in Sources */,
 				B55307CA2280DE6700C7EBC9 /* BackEndTableViewDelegate.swift in Sources */,
 				B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */,
 				B5EBC06222788E45003372E0 /* StoreFrontTableViewDelegate.swift in Sources */,

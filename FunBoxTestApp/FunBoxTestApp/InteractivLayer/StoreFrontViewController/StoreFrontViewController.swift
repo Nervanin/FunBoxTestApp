@@ -10,13 +10,9 @@ import UIKit
 
 class StoreFrontViewController: UIViewController {
     
-    
-    //var view: StroreFrontView?
     var parseDeviceData = ParseDataSource()
     var storeFrontView = StoreFrontView()
-    var backEndVC = BackEndViewController()
-    var storeFrontButton = UIButton(type: .custom)
-    var customView: UIView?
+    var backEndViewController = BackEndViewController()
     
     override func loadView() {
         super.loadView()
@@ -25,6 +21,11 @@ class StoreFrontViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         addStoreObj()
         parseDeviceData.parseDevice()
     }
@@ -34,20 +35,12 @@ class StoreFrontViewController: UIViewController {
         storeFrontView.delegate = self
         self.view.addSubview(storeFrontView)
     }
-    
-    @objc func backEndButtonDidPressed(_ sender: UIButton) {
-        if sender == storeFrontButton {
-            let backEndViewController = BackEndViewController()
-            navigationController?.pushViewController(backEndViewController, animated: true)
-            print("pressed")
-        }
-    }
-    
+
 }
 
 extension StoreFrontViewController: ButtonDelegate {
     func buttonDidPressed(button: UIButton) {
-        navigationController?.pushViewController(backEndVC, animated: true)
+        navigationController?.present(backEndViewController, animated: true, completion: nil)
     }
     
     

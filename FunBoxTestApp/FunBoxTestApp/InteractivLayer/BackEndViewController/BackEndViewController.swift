@@ -10,7 +10,6 @@ import UIKit
 
 class BackEndViewController: UIViewController {
     
-    //var backEndView = BackEndView()
     lazy var storeFrontViewController = StoreFrontViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +30,6 @@ class BackEndViewController: UIViewController {
 
 extension BackEndViewController: ButtonDelegate {
     func buttonDidPressed(button: UIButton) {
-        navigationController?.pushViewController(storeFrontViewController, animated: true)
+       dismiss(animated: true, completion: nil)
     }
 }

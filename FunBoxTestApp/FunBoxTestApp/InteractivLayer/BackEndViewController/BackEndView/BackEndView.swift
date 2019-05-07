@@ -27,6 +27,10 @@ class BackEndView: UIView {
         setUpButtons()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func setUpTableView(frame: CGRect) {
         tableView = UITableView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height / 1.13), style: .plain)
         tableView.dataSource = tableViewDataSource
@@ -55,7 +59,7 @@ class BackEndView: UIView {
         backEndButton.layer.borderWidth = 3
         backEndButton.setTitle("Back-End", for: .normal)
         
-        storeFrontButton.addTarget(self, action: #selector(buttonPress), for: .touchUpInside)
+        storeFrontButton.addTarget(nil, action: #selector(buttonPress), for: .touchUpInside)
         
         setConstraints()
     
@@ -78,8 +82,4 @@ class BackEndView: UIView {
         }
     }
     
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
