@@ -10,7 +10,8 @@ import Foundation
 
 class ParseDataSource {
     
-    func parseDevice() {
+    func parseDevice(completionHandler: @escaping (_ deviceObject: Device) -> Void) {
+       // var deviceArray = [Device]()
         guard let path = Bundle.main.path(forResource: "Devices", ofType: "json") else {
             return
         }
@@ -24,7 +25,9 @@ class ParseDataSource {
                     }
                     let decoder = JSONDecoder()
                     let device: Device = try decoder.decode(Device.self, from: data)
-                    print(device)
+                    //print(device)
+                   // deviceArray.append(device)
+                    completionHandler(device)
                 } catch {
                     print(error)
                 }

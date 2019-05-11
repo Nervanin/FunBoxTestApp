@@ -11,10 +11,22 @@ import UIKit
 class BackEndViewController: UIViewController {
     
     lazy var storeFrontViewController = StoreFrontViewController()
+    var dataSource = ParseDataSource()
+    var backEndView = BackEndView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addBackObject()
-        view.backgroundColor = #colorLiteral(red: 0.1921568662, green: 0.007843137719, blue: 0.09019608051, alpha: 1)
+        setButtonsToNavigationBar()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        DispatchQueue.main.async {
+            //self.backEndView.tableView.reloadData()
+        }
     }
     
     override func loadView() {
@@ -25,11 +37,22 @@ class BackEndViewController: UIViewController {
         let backEndView = BackEndView(frame: view.frame)
         backEndView.delegate = self
         self.view.addSubview(backEndView)
+        
+    }
+    
+    func setButtonsToNavigationBar() {
+        //navigationButtonsInit
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        let addDeviceButton = UIBarButtonItem(title: "add", style: .plain, target: nil, action: nil)
+        //setNavigationButtons
+        navigationItem.leftBarButtonItem = backButton
+        navigationItem.rightBarButtonItem = addDeviceButton
     }
 }
 
+
 extension BackEndViewController: ButtonDelegate {
     func buttonDidPressed(button: UIButton) {
-       dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
 }

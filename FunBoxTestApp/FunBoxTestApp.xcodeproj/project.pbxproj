@@ -20,6 +20,11 @@
 		B556D28D22723B20006073BD /* StoreFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556D28C22723B20006073BD /* StoreFrontView.swift */; };
 		B556D28F22723DDA006073BD /* StoreFrontTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556D28E22723DDA006073BD /* StoreFrontTableViewDataSource.swift */; };
 		B556D29322723F9A006073BD /* ModelLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556D29222723F9A006073BD /* ModelLabelTableViewCell.swift */; };
+		B57E6B7E22872873005E6F52 /* BackEndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E6B7D22872873005E6F52 /* BackEndTableViewCell.swift */; };
+		B5B8E2B82282EEA8005DD492 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B8E2B72282EEA8005DD492 /* CoreDataStack.swift */; };
+		B5B8E2BD2284FC73005DD492 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B8E2BC2284FC73005DD492 /* StorageManager.swift */; };
+		B5B8E2BF2285DCC1005DD492 /* DataModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B8E2BE2285DCC1005DD492 /* DataModelDelegate.swift */; };
+		B5B8E2C22285DE3F005DD492 /* DevicesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5B8E2C02285DE3F005DD492 /* DevicesDataModel.xcdatamodeld */; };
 		B5C7714322773FFC00B537C2 /* Devices.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C7714222773FFC00B537C2 /* Devices.json */; };
 		B5C77145227742B500B537C2 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C77144227742B500B537C2 /* DeviceModel.swift */; };
 		B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C77146227744B000B537C2 /* ParseDataDevice.swift */; };
@@ -45,6 +50,11 @@
 		B556D28C22723B20006073BD /* StoreFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFrontView.swift; sourceTree = "<group>"; };
 		B556D28E22723DDA006073BD /* StoreFrontTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFrontTableViewDataSource.swift; sourceTree = "<group>"; };
 		B556D29222723F9A006073BD /* ModelLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLabelTableViewCell.swift; sourceTree = "<group>"; };
+		B57E6B7D22872873005E6F52 /* BackEndTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndTableViewCell.swift; sourceTree = "<group>"; };
+		B5B8E2B72282EEA8005DD492 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B5B8E2BC2284FC73005DD492 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B5B8E2BE2285DCC1005DD492 /* DataModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelDelegate.swift; sourceTree = "<group>"; };
+		B5B8E2C12285DE3F005DD492 /* DevicesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DevicesDataModel.xcdatamodel; sourceTree = "<group>"; };
 		B5C7714222773FFC00B537C2 /* Devices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Devices.json; sourceTree = "<group>"; };
 		B5C77144227742B500B537C2 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 		B5C77146227744B000B537C2 /* ParseDataDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseDataDevice.swift; sourceTree = "<group>"; };
@@ -91,6 +101,7 @@
 				B5C7714222773FFC00B537C2 /* Devices.json */,
 				B5C77144227742B500B537C2 /* DeviceModel.swift */,
 				B5C77146227744B000B537C2 /* ParseDataDevice.swift */,
+				B5B8E2BE2285DCC1005DD492 /* DataModelDelegate.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -118,6 +129,7 @@
 			children = (
 				B55307C62280DDBB00C7EBC9 /* BackEndTableViewDataSource.swift */,
 				B55307C92280DE6700C7EBC9 /* BackEndTableViewDelegate.swift */,
+				B57E6B7C22872851005E6F52 /* Cell's */,
 			);
 			path = TableViewDelegateDataSource;
 			sourceTree = "<group>";
@@ -152,6 +164,24 @@
 				B556D286227234FB006073BD /* Info.plist */,
 			);
 			path = FunBoxTestApp;
+			sourceTree = "<group>";
+		};
+		B57E6B7C22872851005E6F52 /* Cell's */ = {
+			isa = PBXGroup;
+			children = (
+				B57E6B7D22872873005E6F52 /* BackEndTableViewCell.swift */,
+			);
+			path = "Cell's";
+			sourceTree = "<group>";
+		};
+		B5B8E2B62282EE96005DD492 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B5B8E2C02285DE3F005DD492 /* DevicesDataModel.xcdatamodeld */,
+				B5B8E2B72282EEA8005DD492 /* CoreDataStack.swift */,
+				B5B8E2BC2284FC73005DD492 /* StorageManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		B5C771482277B57F00B537C2 /* StoreFrontViewController */ = {
@@ -194,6 +224,7 @@
 		B5C7714E2277B60200B537C2 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				B5B8E2B62282EE96005DD492 /* CoreData */,
 				B50A190D2276793C0061F747 /* Network */,
 			);
 			path = CoreLayer;
@@ -327,19 +358,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5B8E2BF2285DCC1005DD492 /* DataModelDelegate.swift in Sources */,
 				B556D28F22723DDA006073BD /* StoreFrontTableViewDataSource.swift in Sources */,
 				B556D27D227234F8006073BD /* StoreFrontViewController.swift in Sources */,
+				B5B8E2BD2284FC73005DD492 /* StorageManager.swift in Sources */,
+				B57E6B7E22872873005E6F52 /* BackEndTableViewCell.swift in Sources */,
 				B556D28D22723B20006073BD /* StoreFrontView.swift in Sources */,
 				B55307CA2280DE6700C7EBC9 /* BackEndTableViewDelegate.swift in Sources */,
 				B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */,
 				B5EBC06222788E45003372E0 /* StoreFrontTableViewDelegate.swift in Sources */,
 				B556D27B227234F8006073BD /* AppDelegate.swift in Sources */,
+				B5B8E2B82282EEA8005DD492 /* CoreDataStack.swift in Sources */,
 				B50A190A227665D80061F747 /* CountTableViewCell.swift in Sources */,
 				B55307C422807B7200C7EBC9 /* BackEndView.swift in Sources */,
 				B5C77145227742B500B537C2 /* DeviceModel.swift in Sources */,
 				B55307C72280DDBB00C7EBC9 /* BackEndTableViewDataSource.swift in Sources */,
 				B556D29322723F9A006073BD /* ModelLabelTableViewCell.swift in Sources */,
 				B50A1908227665C90061F747 /* PriceTableViewCell.swift in Sources */,
+				B5B8E2C22285DE3F005DD492 /* DevicesDataModel.xcdatamodeld in Sources */,
 				B5E68E58227F4D0F00AAFBCD /* ButtonDelegate.swift in Sources */,
 				B5E68E55227F1EDF00AAFBCD /* BackEndViewController.swift in Sources */,
 			);
@@ -535,6 +571,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B5B8E2C02285DE3F005DD492 /* DevicesDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5B8E2C12285DE3F005DD492 /* DevicesDataModel.xcdatamodel */,
+			);
+			currentVersion = B5B8E2C12285DE3F005DD492 /* DevicesDataModel.xcdatamodel */;
+			path = DevicesDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B556D26F227234F8006073BD /* Project object */;
 }

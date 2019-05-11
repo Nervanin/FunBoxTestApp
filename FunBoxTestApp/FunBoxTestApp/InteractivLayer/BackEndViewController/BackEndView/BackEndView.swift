@@ -18,13 +18,13 @@ class BackEndView: UIView {
     var backEndButton = UIButton()
     //delegate's
     var delegate: ButtonDelegate!
-    
+  
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         setUpTableView(frame: frame)
         setUpButtons()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -34,10 +34,9 @@ class BackEndView: UIView {
     func setUpTableView(frame: CGRect) {
         tableView = UITableView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height / 1.13), style: .plain)
         tableView.dataSource = tableViewDataSource
-        // tableView.delegate = UITableViewDelegate
         self.addSubview(tableView)
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewDataSource.backEndCellId)
+        tableView.register(ModelLabelBackEndTableViewCell.self, forCellReuseIdentifier: tableViewDataSource.backEndCellId)
     }
     
     @objc func buttonPress(button: UIButton) {
@@ -62,7 +61,7 @@ class BackEndView: UIView {
         storeFrontButton.addTarget(nil, action: #selector(buttonPress), for: .touchUpInside)
         
         setConstraints()
-    
+        
     }
     
     func setConstraints() {

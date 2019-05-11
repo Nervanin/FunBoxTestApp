@@ -15,11 +15,16 @@ protocol DeviceDetailsModelProtocol {
 }
 
 struct Device: Codable {
-    var device: [DeviceDetailsModel]
+    var device: [DeviceDetailsModel]?
+    init() {
+        
+    }
 }
 
 struct DeviceDetailsModel: DeviceDetailsModelProtocol, Codable {
     var model: String
     var price: String
     var count: String
+    
+    
 }
