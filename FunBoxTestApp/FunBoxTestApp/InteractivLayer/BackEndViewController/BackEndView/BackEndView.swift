@@ -21,7 +21,7 @@ class BackEndView: UIView {
   
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         setUpTableView(frame: frame)
         setUpButtons()
         
@@ -69,15 +69,15 @@ class BackEndView: UIView {
         storeFrontButton.snp.makeConstraints { (make) in
             make.left.equalTo(0)
             make.bottom.equalTo(0)
-            make.width.equalTo(187.5)
-            make.height.equalTo(75)
+            make.width.equalTo(self.frame.width / 2)
+            make.height.equalTo(self.frame.height * 0.1)
         }
         
         backEndButton.snp.makeConstraints { (make) in
             make.left.equalTo(storeFrontButton.snp.right)
             make.bottom.equalTo(0)
-            make.width.equalTo(187.5)
-            make.height.equalTo(75)
+            make.right.equalTo(self)
+            make.height.equalTo(self.frame.height * 0.1)
         }
     }
     

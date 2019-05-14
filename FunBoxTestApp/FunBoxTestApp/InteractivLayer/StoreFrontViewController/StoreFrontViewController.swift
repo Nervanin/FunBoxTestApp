@@ -27,7 +27,7 @@ class StoreFrontViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         addStoreObj()
-        //parseDeviceData.parseDevice()
+
     }
     
     func addStoreObj() {
@@ -41,7 +41,6 @@ class StoreFrontViewController: UIViewController {
 extension StoreFrontViewController: ButtonDelegate {
     func buttonDidPressed(button: UIButton) {
         navigationController?.pushViewController(backEndViewController, animated: true)
-       // navigationController?.present(backEndViewController, animated: true, completion: nil)
     }
     
     

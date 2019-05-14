@@ -11,7 +11,7 @@ import Foundation
 protocol DeviceDetailsModelProtocol {
     var model: String { get set }
     var price: String { get set }
-    var count: String { get set }
+    var number: String { get set }
 }
 
 struct Device: Codable {
@@ -24,7 +24,7 @@ struct Device: Codable {
 struct DeviceDetailsModel: DeviceDetailsModelProtocol, Codable {
     var model: String
     var price: String
-    var count: String
+    var number: String
     
     
 }

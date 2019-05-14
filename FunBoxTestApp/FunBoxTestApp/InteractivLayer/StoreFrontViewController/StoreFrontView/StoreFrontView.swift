@@ -11,7 +11,6 @@ import SnapKit
 
 class StoreFrontView: UIView {
     
-    
     //tableView and tableVeiwDelegate/tableViewDataSoursce
     var tableView = UITableView()
     var tableViewDataSourcee = StoreFrontTableViewDataSource()
@@ -37,8 +36,9 @@ class StoreFrontView: UIView {
     }
     
     func setUpTableView(frame: CGRect) {
-        //set TableView
+        //setUp TableView
         tableView = UITableView(frame: CGRect(x: 0, y: 0, width: frame.width, height: frame.height / 1.5), style: .plain)
+        
         tableView.dataSource = tableViewDataSourcee
         tableView.delegate = tableViewDelegate
         self.addSubview(tableView)
@@ -73,7 +73,6 @@ class StoreFrontView: UIView {
         backEndButton.layer.borderWidth = 3
         backEndButton.setTitle("Back-End", for: .normal)
         
-        
         setConstraints()
         
         backEndButton.addTarget(self, action: #selector(buttonPress), for: .touchUpInside)
@@ -90,24 +89,17 @@ class StoreFrontView: UIView {
         storeFrontButton.snp.makeConstraints { (make) in
             make.left.equalTo(0)
             make.bottom.equalTo(0)
-            make.width.equalTo(187.5)
-            make.height.equalTo(75)
+            make.width.equalTo(self.frame.width / 2)
+            make.height.equalTo(self.frame.height * 0.1)
         }
         
         backEndButton.snp.makeConstraints { (make) in
             make.left.equalTo(storeFrontButton.snp.right)
             make.bottom.equalTo(0)
-            make.width.equalTo(187.5)
-            make.height.equalTo(75)
+            make.width.equalTo(self.frame.width / 2)
+            make.height.equalTo(self.frame.height * 0.1)
         }
     }
-    
-//    @objc func backEndButtonDidPressed(_ sender: UIButton) {
-//        let backEndViewController = BackEndViewController()
-//        let navigationController = UINavigationController()
-//        if sender == backEndButton {
-//        navigationController.pushViewController(backEndViewController, animated: true)
-//        }
-//    }
+
 }
 

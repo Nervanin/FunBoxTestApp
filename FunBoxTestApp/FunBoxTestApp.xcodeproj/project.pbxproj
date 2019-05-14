@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		65DB085E1B8FB2BA05B3E82F /* Pods_FunBoxTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6E6294DB0DD0FBE5A47313 /* Pods_FunBoxTestApp.framework */; };
+		B5082AC82287885B00504575 /* AddNewDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5082AC72287885B00504575 /* AddNewDeviceViewController.swift */; };
 		B50A1908227665C90061F747 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A1907227665C90061F747 /* PriceTableViewCell.swift */; };
 		B50A190A227665D80061F747 /* CountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A1909227665D80061F747 /* CountTableViewCell.swift */; };
 		B55307C422807B7200C7EBC9 /* BackEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55307C322807B7200C7EBC9 /* BackEndView.swift */; };
@@ -28,6 +29,9 @@
 		B5C7714322773FFC00B537C2 /* Devices.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C7714222773FFC00B537C2 /* Devices.json */; };
 		B5C77145227742B500B537C2 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C77144227742B500B537C2 /* DeviceModel.swift */; };
 		B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C77146227744B000B537C2 /* ParseDataDevice.swift */; };
+		B5D1B159228A33E50034CB68 /* AddNewDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1B158228A33E50034CB68 /* AddNewDeviceView.swift */; };
+		B5D1B15C228A43430034CB68 /* AddNewDeviceTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1B15B228A43430034CB68 /* AddNewDeviceTableViewDelegate.swift */; };
+		B5D1B15E228A43540034CB68 /* AddNewDeviceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1B15D228A43540034CB68 /* AddNewDeviceDataSource.swift */; };
 		B5E68E55227F1EDF00AAFBCD /* BackEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E68E54227F1EDF00AAFBCD /* BackEndViewController.swift */; };
 		B5E68E58227F4D0F00AAFBCD /* ButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E68E57227F4D0F00AAFBCD /* ButtonDelegate.swift */; };
 		B5EBC06222788E45003372E0 /* StoreFrontTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EBC06122788E45003372E0 /* StoreFrontTableViewDelegate.swift */; };
@@ -36,6 +40,7 @@
 /* Begin PBXFileReference section */
 		5C6E6294DB0DD0FBE5A47313 /* Pods_FunBoxTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunBoxTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE846B36A52FD7FFB808F5C /* Pods-FunBoxTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunBoxTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FunBoxTestApp/Pods-FunBoxTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B5082AC72287885B00504575 /* AddNewDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceViewController.swift; sourceTree = "<group>"; };
 		B50A1907227665C90061F747 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		B50A1909227665D80061F747 /* CountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountTableViewCell.swift; sourceTree = "<group>"; };
 		B55307C322807B7200C7EBC9 /* BackEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndView.swift; sourceTree = "<group>"; };
@@ -58,6 +63,9 @@
 		B5C7714222773FFC00B537C2 /* Devices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Devices.json; sourceTree = "<group>"; };
 		B5C77144227742B500B537C2 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 		B5C77146227744B000B537C2 /* ParseDataDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseDataDevice.swift; sourceTree = "<group>"; };
+		B5D1B158228A33E50034CB68 /* AddNewDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceView.swift; sourceTree = "<group>"; };
+		B5D1B15B228A43430034CB68 /* AddNewDeviceTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceTableViewDelegate.swift; sourceTree = "<group>"; };
+		B5D1B15D228A43540034CB68 /* AddNewDeviceDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceDataSource.swift; sourceTree = "<group>"; };
 		B5E68E54227F1EDF00AAFBCD /* BackEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndViewController.swift; sourceTree = "<group>"; };
 		B5E68E57227F4D0F00AAFBCD /* ButtonDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonDelegate.swift; sourceTree = "<group>"; };
 		B5EBC06122788E45003372E0 /* StoreFrontTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFrontTableViewDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +91,16 @@
 				DF7164CDCF6FE82EFBCBBA75 /* Pods-FunBoxTestApp.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5082AC62287880C00504575 /* AddNewDeviceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5082AC72287885B00504575 /* AddNewDeviceViewController.swift */,
+				B5D1B15A228A42ED0034CB68 /* TableViewDelegateDataSource */,
+				B5D1B157228A33BD0034CB68 /* AddNewDeviceView */,
+			);
+			path = AddNewDeviceViewController;
 			sourceTree = "<group>";
 		};
 		B50A190622765E8E0061F747 /* Cell's */ = {
@@ -215,8 +233,9 @@
 		B5C7714C2277B5D900B537C2 /* InteractivLayer */ = {
 			isa = PBXGroup;
 			children = (
-				B515555B227A0462004C21A6 /* BackEndViewController */,
 				B5C771482277B57F00B537C2 /* StoreFrontViewController */,
+				B515555B227A0462004C21A6 /* BackEndViewController */,
+				B5082AC62287880C00504575 /* AddNewDeviceViewController */,
 			);
 			path = InteractivLayer;
 			sourceTree = "<group>";
@@ -228,6 +247,23 @@
 				B50A190D2276793C0061F747 /* Network */,
 			);
 			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		B5D1B157228A33BD0034CB68 /* AddNewDeviceView */ = {
+			isa = PBXGroup;
+			children = (
+				B5D1B158228A33E50034CB68 /* AddNewDeviceView.swift */,
+			);
+			path = AddNewDeviceView;
+			sourceTree = "<group>";
+		};
+		B5D1B15A228A42ED0034CB68 /* TableViewDelegateDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				B5D1B15B228A43430034CB68 /* AddNewDeviceTableViewDelegate.swift */,
+				B5D1B15D228A43540034CB68 /* AddNewDeviceDataSource.swift */,
+			);
+			path = TableViewDelegateDataSource;
 			sourceTree = "<group>";
 		};
 		B5E68E56227F4C9600AAFBCD /* Service Layer */ = {
@@ -364,18 +400,22 @@
 				B5B8E2BD2284FC73005DD492 /* StorageManager.swift in Sources */,
 				B57E6B7E22872873005E6F52 /* BackEndTableViewCell.swift in Sources */,
 				B556D28D22723B20006073BD /* StoreFrontView.swift in Sources */,
+				B5082AC82287885B00504575 /* AddNewDeviceViewController.swift in Sources */,
 				B55307CA2280DE6700C7EBC9 /* BackEndTableViewDelegate.swift in Sources */,
 				B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */,
+				B5D1B159228A33E50034CB68 /* AddNewDeviceView.swift in Sources */,
 				B5EBC06222788E45003372E0 /* StoreFrontTableViewDelegate.swift in Sources */,
 				B556D27B227234F8006073BD /* AppDelegate.swift in Sources */,
 				B5B8E2B82282EEA8005DD492 /* CoreDataStack.swift in Sources */,
 				B50A190A227665D80061F747 /* CountTableViewCell.swift in Sources */,
 				B55307C422807B7200C7EBC9 /* BackEndView.swift in Sources */,
 				B5C77145227742B500B537C2 /* DeviceModel.swift in Sources */,
+				B5D1B15C228A43430034CB68 /* AddNewDeviceTableViewDelegate.swift in Sources */,
 				B55307C72280DDBB00C7EBC9 /* BackEndTableViewDataSource.swift in Sources */,
 				B556D29322723F9A006073BD /* ModelLabelTableViewCell.swift in Sources */,
 				B50A1908227665C90061F747 /* PriceTableViewCell.swift in Sources */,
 				B5B8E2C22285DE3F005DD492 /* DevicesDataModel.xcdatamodeld in Sources */,
+				B5D1B15E228A43540034CB68 /* AddNewDeviceDataSource.swift in Sources */,
 				B5E68E58227F4D0F00AAFBCD /* ButtonDelegate.swift in Sources */,
 				B5E68E55227F1EDF00AAFBCD /* BackEndViewController.swift in Sources */,
 			);

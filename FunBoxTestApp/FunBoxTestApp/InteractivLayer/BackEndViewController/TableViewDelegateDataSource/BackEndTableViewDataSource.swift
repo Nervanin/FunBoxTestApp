@@ -17,7 +17,6 @@ class BackEndTableViewDataSource: NSObject  {
     override init() {
         super.init()
         self.dataSource.parseDevice { (completionHeandler) in
-            //print(device)
             self.deviceArray = completionHeandler
             
         }
@@ -28,18 +27,18 @@ class BackEndTableViewDataSource: NSObject  {
 extension BackEndTableViewDataSource: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3//(device.device?.count ?? 5)
+        return (deviceArray.device?.count ?? 0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.backEndCellId, for: indexPath) as! ModelLabelBackEndTableViewCell
-    
+        
         cell.modelLabel.text = deviceArray.device?[indexPath.row].model
-     
+        
         return cell
     }
     

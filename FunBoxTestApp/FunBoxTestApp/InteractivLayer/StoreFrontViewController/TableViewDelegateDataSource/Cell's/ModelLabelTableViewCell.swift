@@ -26,7 +26,10 @@ class ModelLabelTableViewCell: UITableViewCell {
     func setUpLabel() {
         contentView.addSubview(modelLabel)
         modelLabel.snp.makeConstraints({ (make) in
-            make.top.left.equalTo(contentView).offset(8)
+            make.top.left.equalTo(contentView).offset(40)
+            make.bottom.equalTo(contentView).offset(-40)
+            make.left.equalTo(contentView).offset(8)
+            
         })
     }
 }

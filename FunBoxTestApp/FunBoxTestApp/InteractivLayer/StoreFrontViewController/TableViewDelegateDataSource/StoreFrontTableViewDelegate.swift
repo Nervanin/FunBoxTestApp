@@ -10,4 +10,7 @@ import UIKit
 
 class StoreFrontTableViewDelegate: NSObject, UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
