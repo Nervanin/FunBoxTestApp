@@ -27,7 +27,6 @@ class StoreFrontViewController: UIViewController {
         super.viewWillAppear(true)
         
         addStoreObj()
-
     }
     
     func addStoreObj() {

@@ -11,6 +11,9 @@
 		B5082AC82287885B00504575 /* AddNewDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5082AC72287885B00504575 /* AddNewDeviceViewController.swift */; };
 		B50A1908227665C90061F747 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A1907227665C90061F747 /* PriceTableViewCell.swift */; };
 		B50A190A227665D80061F747 /* CountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50A1909227665D80061F747 /* CountTableViewCell.swift */; };
+		B52F2C2E229361B5005E6F0F /* InputModelNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52F2C2D229361B5005E6F0F /* InputModelNameTableViewCell.swift */; };
+		B52F2C3222936301005E6F0F /* InputPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52F2C3122936301005E6F0F /* InputPriceTableViewCell.swift */; };
+		B52F2C342293641C005E6F0F /* InputCountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52F2C332293641C005E6F0F /* InputCountTableViewCell.swift */; };
 		B55307C422807B7200C7EBC9 /* BackEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55307C322807B7200C7EBC9 /* BackEndView.swift */; };
 		B55307C72280DDBB00C7EBC9 /* BackEndTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55307C62280DDBB00C7EBC9 /* BackEndTableViewDataSource.swift */; };
 		B55307CA2280DE6700C7EBC9 /* BackEndTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55307C92280DE6700C7EBC9 /* BackEndTableViewDelegate.swift */; };
@@ -43,6 +46,9 @@
 		B5082AC72287885B00504575 /* AddNewDeviceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceViewController.swift; sourceTree = "<group>"; };
 		B50A1907227665C90061F747 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		B50A1909227665D80061F747 /* CountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountTableViewCell.swift; sourceTree = "<group>"; };
+		B52F2C2D229361B5005E6F0F /* InputModelNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputModelNameTableViewCell.swift; sourceTree = "<group>"; };
+		B52F2C3122936301005E6F0F /* InputPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPriceTableViewCell.swift; sourceTree = "<group>"; };
+		B52F2C332293641C005E6F0F /* InputCountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputCountTableViewCell.swift; sourceTree = "<group>"; };
 		B55307C322807B7200C7EBC9 /* BackEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndView.swift; sourceTree = "<group>"; };
 		B55307C62280DDBB00C7EBC9 /* BackEndTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndTableViewDataSource.swift; sourceTree = "<group>"; };
 		B55307C92280DE6700C7EBC9 /* BackEndTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndTableViewDelegate.swift; sourceTree = "<group>"; };
@@ -97,8 +103,9 @@
 			isa = PBXGroup;
 			children = (
 				B5082AC72287885B00504575 /* AddNewDeviceViewController.swift */,
-				B5D1B15A228A42ED0034CB68 /* TableViewDelegateDataSource */,
 				B5D1B157228A33BD0034CB68 /* AddNewDeviceView */,
+				B52F2C2A22935F64005E6F0F /* Cells */,
+				B5D1B15A228A42ED0034CB68 /* TableViewDelegateDataSource */,
 			);
 			path = AddNewDeviceViewController;
 			sourceTree = "<group>";
@@ -132,6 +139,16 @@
 				B55307C82280DDCE00C7EBC9 /* TableViewDelegateDataSource */,
 			);
 			path = BackEndViewController;
+			sourceTree = "<group>";
+		};
+		B52F2C2A22935F64005E6F0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B52F2C2D229361B5005E6F0F /* InputModelNameTableViewCell.swift */,
+				B52F2C3122936301005E6F0F /* InputPriceTableViewCell.swift */,
+				B52F2C332293641C005E6F0F /* InputCountTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B55307C522807B7D00C7EBC9 /* BackEndView */ = {
@@ -395,6 +412,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5B8E2BF2285DCC1005DD492 /* DataModelDelegate.swift in Sources */,
+				B52F2C2E229361B5005E6F0F /* InputModelNameTableViewCell.swift in Sources */,
+				B52F2C3222936301005E6F0F /* InputPriceTableViewCell.swift in Sources */,
 				B556D28F22723DDA006073BD /* StoreFrontTableViewDataSource.swift in Sources */,
 				B556D27D227234F8006073BD /* StoreFrontViewController.swift in Sources */,
 				B5B8E2BD2284FC73005DD492 /* StorageManager.swift in Sources */,
@@ -402,6 +421,7 @@
 				B556D28D22723B20006073BD /* StoreFrontView.swift in Sources */,
 				B5082AC82287885B00504575 /* AddNewDeviceViewController.swift in Sources */,
 				B55307CA2280DE6700C7EBC9 /* BackEndTableViewDelegate.swift in Sources */,
+				B52F2C342293641C005E6F0F /* InputCountTableViewCell.swift in Sources */,
 				B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */,
 				B5D1B159228A33E50034CB68 /* AddNewDeviceView.swift in Sources */,
 				B5EBC06222788E45003372E0 /* StoreFrontTableViewDelegate.swift in Sources */,

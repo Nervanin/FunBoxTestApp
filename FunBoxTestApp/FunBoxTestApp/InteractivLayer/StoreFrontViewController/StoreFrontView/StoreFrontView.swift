@@ -19,16 +19,27 @@ class StoreFrontView: UIView {
     var saveButton = UIButton()
     var storeFrontButton = UIButton()
     var backEndButton = UIButton()
-    
     //delegate's
     var delegate: ButtonDelegate!
+    //GestureRecognizer
+    lazy var swipeRigth = UISwipeGestureRecognizer()
+    lazy var swipeLeft = UISwipeGestureRecognizer()
+    //flag
+    
+    
+    var counter = 0 {
+        didSet {
+            print(counter)
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
         setUpTableView(frame: frame)
         setUpButtons()
-      
+        setGestureRecognizer()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -48,10 +59,38 @@ class StoreFrontView: UIView {
         tableView.register(CountTableViewCell.self, forCellReuseIdentifier: tableViewDataSourcee.countLabelTableCellId)
     }
     
-    @objc func buttonPress(button: UIButton) {
-        delegate.buttonDidPressed(button: backEndButton)
+    //GESTURE RECOGNZER function logic
+    @objc func swipeLeftAction(tapGestureRecognizer: UITapGestureRecognizer) {
+        print("left")
+        counter += 1
+        tableViewDataSourcee.counter = counter
+        tableView.reloadData()
     }
     
+    @objc func swipeRightAction(tapGestureRecognizer: UITapGestureRecognizer) {
+        print("right")
+        if counter > 0 {
+            counter -= 1
+            tableViewDataSourcee.counter = counter
+            tableView.reloadData()
+        } else {
+            print("flag = 0")
+        }
+        
+    }
+    
+    func setGestureRecognizer() {
+        swipeRigth.addTarget(self, action: #selector(swipeRightAction(tapGestureRecognizer:)))
+        swipeLeft.addTarget(self, action: #selector(swipeLeftAction(tapGestureRecognizer:)))
+        
+        swipeLeft.direction = .left
+        swipeRigth.direction = .right
+        
+        self.addGestureRecognizer(swipeRigth)
+        self.addGestureRecognizer(swipeLeft)
+    }
+    
+    // SETUP Buttons on the view
     func setUpButtons() {
         //set saveButton
         self.addSubview(saveButton)
@@ -80,6 +119,10 @@ class StoreFrontView: UIView {
         backEndButton.addTarget(self, action: #selector(buttonPress), for: .touchUpInside)
     }
     
+    @objc func buttonPress(button: UIButton) {
+        delegate.buttonDidPressed(button: backEndButton)
+    }
+    
     func setConstraints() {
         saveButton.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
@@ -102,6 +145,6 @@ class StoreFrontView: UIView {
             make.height.equalTo(self.frame.height * 0.1)
         }
     }
-
+    
 }
 

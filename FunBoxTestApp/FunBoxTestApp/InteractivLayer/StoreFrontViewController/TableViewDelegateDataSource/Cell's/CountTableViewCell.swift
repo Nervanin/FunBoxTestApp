@@ -29,7 +29,15 @@ class CountTableViewCell: UITableViewCell {
         contentView.addSubview(count)
         
         countLabel.snp.makeConstraints { (make) in
-            make.top.left.equalTo(contentView).offset(8)
+            make.left.equalTo(contentView).offset(8)
+            make.top.equalTo(contentView).offset(40)
+            make.bottom.equalTo(contentView).offset(-40)
+        }
+        
+        count.snp.makeConstraints { (make) in
+            make.top.equalTo(contentView).offset(40)
+            make.bottom.equalTo(contentView).offset(-40)
+            make.right.equalTo(contentView).offset(-8)
         }
     }
     

@@ -16,6 +16,7 @@ class StoreFrontTableViewDataSource: NSObject {
     var countLabelTableCellId = "countLabelTableCellId"
     //Properys
     var device = Device()
+    var counter = 0
     
     override init() {
         super.init()
@@ -44,17 +45,18 @@ extension StoreFrontTableViewDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cellModel = tableView.dequeueReusableCell(withIdentifier: modellabelTableCellId) as! ModelLabelTableViewCell
-            cellModel.modelLabel.text = device.device?[indexPath.row].model
+            cellModel.modelLabel.text = device.device?[counter].model
             cellModel.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1)
             return cellModel
         } else if indexPath.row == 1 {
             let cellPrice = tableView.dequeueReusableCell(withIdentifier: priceLabelTableCellId) as! PriceTableViewCell
             cellPrice.priceLabel.text = "Цена"
-            cellPrice.priceCountLabel.text = device.device?[indexPath.row].price
+            cellPrice.priceCountLabel.text = device.device?[counter].price
             return cellPrice
         } else if indexPath.row == 2 {
             let cellCount = tableView.dequeueReusableCell(withIdentifier: countLabelTableCellId, for: indexPath) as! CountTableViewCell
             cellCount.countLabel.text = "Количество"
+            cellCount.count.text = device.device?[counter].number
             return cellCount
         }
         
