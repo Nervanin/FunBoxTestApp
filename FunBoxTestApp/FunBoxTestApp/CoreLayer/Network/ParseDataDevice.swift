@@ -10,6 +10,8 @@ import Foundation
 
 class ParseDataSource {
     
+    static let shared: ParseDataSource = ParseDataSource()
+    
     func parseDevice(completionHandler: @escaping (_ deviceObject: Device) -> Void) {
         guard let path = Bundle.main.path(forResource: "Devices", ofType: "json") else {
             return

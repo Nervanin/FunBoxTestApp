@@ -29,7 +29,14 @@ class PriceTableViewCell: UITableViewCell {
         contentView.addSubview(priceCountLabel)
         
         priceLabel.snp.makeConstraints { (make) in
-            make.top.left.equalTo(contentView).offset(8)
+            make.top.equalTo(contentView).offset(40)
+            make.bottom.equalTo(contentView).offset(-40)
+            make.left.equalTo(contentView).offset(16)
+        }
+        
+        priceCountLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(contentView).offset(40)
+            make.right.equalTo(contentView).offset(-16)
         }
     }
     

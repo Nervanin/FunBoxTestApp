@@ -10,15 +10,14 @@ import UIKit
 
 class BackEndTableViewDataSource: NSObject  {
     let backEndCellId = "BackEndCellId"
-    var completionHeandler = Device()
-    var dataSource = ParseDataSource()
-    var deviceArray = Device()
+    var device = Device()
     
     override init() {
         super.init()
-        self.dataSource.parseDevice { (completionHeandler) in
-            self.deviceArray = completionHeandler
-            
+        
+        ParseDataSource.shared.parseDevice { (model) in
+            self.device = model
+            print(self.device)
         }
     }
 }
@@ -31,13 +30,17 @@ extension BackEndTableViewDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (deviceArray.device?.count ?? 0)
+        return (device.device?.count ?? 0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.backEndCellId, for: indexPath) as! ModelLabelBackEndTableViewCell
-        
-        cell.modelLabel.text = deviceArray.device?[indexPath.row].model
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.backEndCellId, for: indexPath) as! BackEndTableViewCell
+        //config modelName label for cell
+        cell.modelLabel.text = device.device?[indexPath.row].model
+        cell.modelLabel.numberOfLines = 0
+        //config countLabel label for cell
+        cell.countLabel.text = "\(String(describing: device.device![indexPath.row].number)) шт."
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }

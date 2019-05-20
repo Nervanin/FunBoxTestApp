@@ -44,6 +44,8 @@ class StoreFrontView: UIView {
         self.addSubview(tableView)
         
         tableView.register(ModelLabelTableViewCell.self, forCellReuseIdentifier: tableViewDataSourcee.modellabelTableCellId)
+        tableView.register(PriceTableViewCell.self, forCellReuseIdentifier: tableViewDataSourcee.priceLabelTableCellId)
+        tableView.register(CountTableViewCell.self, forCellReuseIdentifier: tableViewDataSourcee.countLabelTableCellId)
     }
     
     @objc func buttonPress(button: UIButton) {

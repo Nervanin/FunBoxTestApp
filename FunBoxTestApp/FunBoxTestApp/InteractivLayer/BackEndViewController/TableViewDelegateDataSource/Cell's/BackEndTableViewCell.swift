@@ -9,10 +9,11 @@
 import UIKit
 import SnapKit
 
-class ModelLabelBackEndTableViewCell: UITableViewCell {
+class BackEndTableViewCell: UITableViewCell {
     
     var modelLabel = UILabel()
-
+    var countLabel = UILabel()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -24,10 +25,20 @@ class ModelLabelBackEndTableViewCell: UITableViewCell {
     }
     
     func setUpLabel() {
+        
         contentView.addSubview(modelLabel)
+        contentView.addSubview(countLabel)
+        
         modelLabel.snp.makeConstraints({ (make) in
             make.top.left.equalTo(contentView).offset(8)
+            make.left.equalTo(contentView).offset(8)
         })
+        countLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(contentView).offset(8)
+            make.right.equalTo(contentView).offset(-12)
+        }
+        
+        modelLabel.numberOfLines = 0
     }
-
+    
 }

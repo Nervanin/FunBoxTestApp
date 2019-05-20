@@ -36,7 +36,7 @@ class BackEndView: UIView {
         tableView.dataSource = tableViewDataSource
         self.addSubview(tableView)
         
-        tableView.register(ModelLabelBackEndTableViewCell.self, forCellReuseIdentifier: tableViewDataSource.backEndCellId)
+        tableView.register(BackEndTableViewCell.self, forCellReuseIdentifier: tableViewDataSource.backEndCellId)
     }
     
     @objc func buttonPress(button: UIButton) {

@@ -10,7 +10,6 @@ import UIKit
 
 class StoreFrontViewController: UIViewController {
     
-    var parseDeviceData = ParseDataSource()
     var storeFrontView = StoreFrontView()
     var backEndViewController = BackEndViewController()
     
@@ -26,6 +25,7 @@ class StoreFrontViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
         addStoreObj()
 
     }
