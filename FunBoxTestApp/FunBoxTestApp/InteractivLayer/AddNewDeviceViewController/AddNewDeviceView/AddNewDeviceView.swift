@@ -41,6 +41,9 @@ class AddNewDeviceView: UIView {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewDataSource.modelNameCellId)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewDataSource.priceCell)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: tableViewDataSource.countCell)
+        tableView.register(InputModelNameTableViewCell.self, forCellReuseIdentifier: tableViewDataSource.inputModelCellId)
+        tableView.register(InputPriceTableViewCell.self, forCellReuseIdentifier: tableViewDataSource.inputPriceCellId)
+        tableView.register(InputCountTableViewCell.self, forCellReuseIdentifier: tableViewDataSource.inputCountCellId)
     }
     
     required init?(coder aDecoder: NSCoder) {

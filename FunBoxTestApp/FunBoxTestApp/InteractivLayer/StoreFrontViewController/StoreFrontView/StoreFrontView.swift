@@ -24,14 +24,8 @@ class StoreFrontView: UIView {
     //GestureRecognizer
     lazy var swipeRigth = UISwipeGestureRecognizer()
     lazy var swipeLeft = UISwipeGestureRecognizer()
-    //flag
-    
-    
-    var counter = 0 {
-        didSet {
-            print(counter)
-        }
-    }
+    //counter for swipe table in StoreFrontView
+    var counter = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -60,28 +54,45 @@ class StoreFrontView: UIView {
     }
     
     //GESTURE RECOGNZER function logic
-    @objc func swipeLeftAction(tapGestureRecognizer: UITapGestureRecognizer) {
-        print("left")
-        counter += 1
-        tableViewDataSourcee.counter = counter
-        tableView.reloadData()
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizer.Direction.left:
+                counter += 1
+                tableViewDataSourcee.counter = counter
+                tableView.reloadData()
+                //animated logic
+                let transition = CATransition()
+                transition.duration = 0.5
+                transition.type = CATransitionType.push
+                transition.subtype = CATransitionSubtype.fromRight
+                transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+                self.window!.layer.add(transition, forKey: kCATransition)
+            case UISwipeGestureRecognizer.Direction.right:
+                if counter > 0 {
+                    counter -= 1
+                    tableViewDataSourcee.counter = counter
+                    tableView.reloadData()
+                    //animated logic
+                    let transition = CATransition()
+                    transition.duration = 0.5
+                    transition.type = CATransitionType.push
+                    transition.subtype = CATransitionSubtype.fromLeft
+                    transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+                    self.window!.layer.add(transition, forKey: kCATransition)
+                } else {
+                    print("flag = 0")
+                }
+            default:
+                break
+            }
+        }
     }
     
-    @objc func swipeRightAction(tapGestureRecognizer: UITapGestureRecognizer) {
-        print("right")
-        if counter > 0 {
-            counter -= 1
-            tableViewDataSourcee.counter = counter
-            tableView.reloadData()
-        } else {
-            print("flag = 0")
-        }
-        
-    }
     
     func setGestureRecognizer() {
-        swipeRigth.addTarget(self, action: #selector(swipeRightAction(tapGestureRecognizer:)))
-        swipeLeft.addTarget(self, action: #selector(swipeLeftAction(tapGestureRecognizer:)))
+        swipeRigth.addTarget(self, action: #selector(respondToSwipeGesture(gesture:)))
+        swipeLeft.addTarget(self, action: #selector(respondToSwipeGesture(gesture:)))
         
         swipeLeft.direction = .left
         swipeRigth.direction = .right

@@ -14,9 +14,12 @@ class AddNewDeviceDataSource: NSObject, UITableViewDataSource {
     var modelNameCellId = "modelNameCellId"
     var priceCell = "priceCell"
     var countCell = "countCell"
+    var inputModelCellId = "inputModelCellId"
+    var inputPriceCellId = "inputPriceCellId"
+    var inputCountCellId = "inputCountCellId"
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -25,17 +28,22 @@ class AddNewDeviceDataSource: NSObject, UITableViewDataSource {
             modelCell?.textLabel?.text = "Название"
             return modelCell ?? UITableViewCell()
         } else if indexPath.row == 1 {
-            
+            let inputModelName = tableView.dequeueReusableCell(withIdentifier: inputModelCellId) as! InputModelNameTableViewCell
+            return inputModelName
         } else if indexPath.row == 2 {
             let priceCell = tableView.dequeueReusableCell(withIdentifier: self.priceCell)
             priceCell?.textLabel?.text = "Цена"
             return priceCell ?? UITableViewCell()
         } else if indexPath.row == 3 {
-            
+            let inputPriceCell = tableView.dequeueReusableCell(withIdentifier: self.inputPriceCellId) as! InputPriceTableViewCell
+            return inputPriceCell
         } else if indexPath.row == 4 {
             let countCell = tableView.dequeueReusableCell(withIdentifier: self.countCell)
             countCell?.textLabel?.text = "Количество"
             return countCell ?? UITableViewCell()
+        } else if indexPath.row == 5 {
+            let inputCountCell = tableView.dequeueReusableCell(withIdentifier: self.inputCountCellId) as! InputCountTableViewCell
+            return inputCountCell
         }
         
         

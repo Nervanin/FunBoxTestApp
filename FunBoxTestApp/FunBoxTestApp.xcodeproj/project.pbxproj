@@ -32,6 +32,7 @@
 		B5C7714322773FFC00B537C2 /* Devices.json in Resources */ = {isa = PBXBuildFile; fileRef = B5C7714222773FFC00B537C2 /* Devices.json */; };
 		B5C77145227742B500B537C2 /* DeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C77144227742B500B537C2 /* DeviceModel.swift */; };
 		B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C77146227744B000B537C2 /* ParseDataDevice.swift */; };
+		B5CC407622942AB900A06069 /* ConfigureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CC407522942AB900A06069 /* ConfigureCell.swift */; };
 		B5D1B159228A33E50034CB68 /* AddNewDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1B158228A33E50034CB68 /* AddNewDeviceView.swift */; };
 		B5D1B15C228A43430034CB68 /* AddNewDeviceTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1B15B228A43430034CB68 /* AddNewDeviceTableViewDelegate.swift */; };
 		B5D1B15E228A43540034CB68 /* AddNewDeviceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D1B15D228A43540034CB68 /* AddNewDeviceDataSource.swift */; };
@@ -69,6 +70,7 @@
 		B5C7714222773FFC00B537C2 /* Devices.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Devices.json; sourceTree = "<group>"; };
 		B5C77144227742B500B537C2 /* DeviceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModel.swift; sourceTree = "<group>"; };
 		B5C77146227744B000B537C2 /* ParseDataDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseDataDevice.swift; sourceTree = "<group>"; };
+		B5CC407522942AB900A06069 /* ConfigureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureCell.swift; sourceTree = "<group>"; };
 		B5D1B158228A33E50034CB68 /* AddNewDeviceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceView.swift; sourceTree = "<group>"; };
 		B5D1B15B228A43430034CB68 /* AddNewDeviceTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceTableViewDelegate.swift; sourceTree = "<group>"; };
 		B5D1B15D228A43540034CB68 /* AddNewDeviceDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewDeviceDataSource.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				B5E68E57227F4D0F00AAFBCD /* ButtonDelegate.swift */,
+				B5CC407522942AB900A06069 /* ConfigureCell.swift */,
 			);
 			path = "Service Layer";
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				B55307CA2280DE6700C7EBC9 /* BackEndTableViewDelegate.swift in Sources */,
 				B52F2C342293641C005E6F0F /* InputCountTableViewCell.swift in Sources */,
 				B5C77147227744B000B537C2 /* ParseDataDevice.swift in Sources */,
+				B5CC407622942AB900A06069 /* ConfigureCell.swift in Sources */,
 				B5D1B159228A33E50034CB68 /* AddNewDeviceView.swift in Sources */,
 				B5EBC06222788E45003372E0 /* StoreFrontTableViewDelegate.swift in Sources */,
 				B556D27B227234F8006073BD /* AppDelegate.swift in Sources */,
