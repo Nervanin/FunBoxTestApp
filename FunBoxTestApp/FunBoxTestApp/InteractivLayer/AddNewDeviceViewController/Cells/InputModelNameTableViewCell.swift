@@ -9,15 +9,13 @@ import UIKit
 
 class InputModelNameTableViewCell: UITableViewCell, ConfigureCell {
     
-    var textField: UITextField?
+    var textField = UITextField()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
-        textField = UITextField()
-        
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setUpTextField(contentView: contentView, textField: textField ?? UITextField())
+        setUpTextField(contentView: contentView, textField: textField)
     }
     
     required init?(coder aDecoder: NSCoder) {

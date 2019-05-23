@@ -10,7 +10,7 @@ import UIKit
 
 class InputPriceTableViewCell: UITableViewCell, ConfigureCell {
     
-    var textField: UITextField?
+    var textField: UITextField
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
@@ -18,7 +18,7 @@ class InputPriceTableViewCell: UITableViewCell, ConfigureCell {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setUpTextField(contentView: contentView, textField: textField!)
+        setUpTextField(contentView: contentView, textField: textField)
     }
     
     required init?(coder aDecoder: NSCoder) {

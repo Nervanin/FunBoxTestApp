@@ -10,25 +10,23 @@ import UIKit
 
 class AddNewDeviceViewController: UIViewController {
     
-    var addNerDeviceView = AddNewDeviceView()
-    //Cells
-    var model = String()
-    var inputModelTableViewCell = InputModelNameTableViewCell()
-    var inputPriceTableViewCell = InputPriceTableViewCell()
-    var inputCountTableViewCell = InputCountTableViewCell()
+    var addNewDeviceView = AddNewDeviceView()
+    
+    var test = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
-         setButtonsToNavigationBar()
+        setButtonsToNavigationBar()
         setUpView()
     }
     
     func setUpView() {
         
-        addNerDeviceView = AddNewDeviceView(frame: view.frame)
-        self.view.addSubview(addNerDeviceView)
+        addNewDeviceView = AddNewDeviceView(frame: view.frame)
+        self.view.addSubview(addNewDeviceView)
         
     }    
     
@@ -47,11 +45,19 @@ class AddNewDeviceViewController: UIViewController {
     
     @objc func saveBarButtonDidTapped() {
         
-        let model = inputCountTableViewCell.textField?.text
-        let inputModel = InputModelNameTableViewCell(style: .default, reuseIdentifier: addNerDeviceView.tableViewDataSource.inputModelCellId)
+        let indexModelName = IndexPath(row: 1, section: 0)
+        let cellModelName = addNewDeviceView.tableView.cellForRow(at: indexModelName) as! InputModelNameTableViewCell
+        let modelName = cellModelName.textField.text
         
-        RecordDataToSource.shared.addObjectToModel(model: inputModel.textField?.text ?? "null", price: inputPriceTableViewCell.textField?.text ?? "", count: inputCountTableViewCell.textField?.text ?? "")
-        print(inputModel.textField?.text)
+        let indexPrice = IndexPath(row: 3, section: 0)
+        let cellPrice = addNewDeviceView.tableView.cellForRow(at: indexPrice) as! InputPriceTableViewCell
+        let price = cellPrice.textField.text
+        
+        let indexCount = IndexPath(row: 5, section: 0)
+        let cellCount = addNewDeviceView.tableView.cellForRow(at: indexCount) as! InputCountTableViewCell
+        let count = cellCount.textField.text
+        
+        RecordDataToSource.shared.addObjectToModel(model: modelName ?? "", price: price ?? "", count: count ?? "")
     }
     
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class AddNewDeviceDataSource: NSObject, UITableViewDataSource {
     
+    lazy var addNewDeviceVC = AddNewDeviceViewController()
+    
     var modelNameCellId = "modelNameCellId"
     var priceCell = "priceCell"
     var countCell = "countCell"
@@ -28,6 +30,7 @@ class AddNewDeviceDataSource: NSObject, UITableViewDataSource {
             return modelCell ?? UITableViewCell()
         } else if indexPath.row == 1 {
             let inputModelName = tableView.dequeueReusableCell(withIdentifier: inputModelCellId) as! InputModelNameTableViewCell
+            addNewDeviceVC.test = inputModelName.textField.text ?? "123"
             return inputModelName
         } else if indexPath.row == 2 {
             let priceCell = tableView.dequeueReusableCell(withIdentifier: self.priceCell)
@@ -35,6 +38,7 @@ class AddNewDeviceDataSource: NSObject, UITableViewDataSource {
             return priceCell ?? UITableViewCell()
         } else if indexPath.row == 3 {
             let inputPriceCell = tableView.dequeueReusableCell(withIdentifier: self.inputPriceCellId) as! InputPriceTableViewCell
+            
             return inputPriceCell
         } else if indexPath.row == 4 {
             let countCell = tableView.dequeueReusableCell(withIdentifier: self.countCell)

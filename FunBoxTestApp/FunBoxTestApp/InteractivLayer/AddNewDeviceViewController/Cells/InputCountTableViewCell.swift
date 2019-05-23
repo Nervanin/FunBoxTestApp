@@ -10,7 +10,7 @@ import UIKit
 
 class InputCountTableViewCell: UITableViewCell, ConfigureCell {
     
-    var textField: UITextField?
+    var textField: UITextField
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         
