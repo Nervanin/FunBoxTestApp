@@ -13,11 +13,6 @@ class StoreFrontViewController: UIViewController {
     var storeFrontView = StoreFrontView()
     var backEndViewController = BackEndViewController()
     
-    override func loadView() {
-        super.loadView()
-      
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
        

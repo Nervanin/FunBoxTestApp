@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 protocol ConfigureCell {
-    var textField: UITextField { get set }
+    var textField: UITextField? { get set }
     
     func setUpTextField(contentView: UIView, textField: UITextField)
 }

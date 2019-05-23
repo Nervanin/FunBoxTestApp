@@ -11,12 +11,17 @@ import UIKit
 class AddNewDeviceViewController: UIViewController {
     
     var addNerDeviceView = AddNewDeviceView()
+    //Cells
+    var model = String()
+    var inputModelTableViewCell = InputModelNameTableViewCell()
+    var inputPriceTableViewCell = InputPriceTableViewCell()
+    var inputCountTableViewCell = InputCountTableViewCell()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
-        setButtonsToNavigationBar()
+         setButtonsToNavigationBar()
         setUpView()
     }
     
@@ -42,6 +47,11 @@ class AddNewDeviceViewController: UIViewController {
     
     @objc func saveBarButtonDidTapped() {
         
+        let model = inputCountTableViewCell.textField?.text
+        let inputModel = InputModelNameTableViewCell(style: .default, reuseIdentifier: addNerDeviceView.tableViewDataSource.inputModelCellId)
+        
+        RecordDataToSource.shared.addObjectToModel(model: inputModel.textField?.text ?? "null", price: inputPriceTableViewCell.textField?.text ?? "", count: inputCountTableViewCell.textField?.text ?? "")
+        print(inputModel.textField?.text)
     }
     
 }

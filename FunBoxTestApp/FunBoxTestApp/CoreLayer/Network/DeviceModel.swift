@@ -26,5 +26,11 @@ struct DeviceDetailsModel: DeviceDetailsModelProtocol, Codable {
     var price: String
     var number: String
     
+    init(model: String, price: String, number: String) {
+        self.model = model
+        self.price = price
+        self.number = number
+    }
+    
     
 }

@@ -10,7 +10,6 @@ import UIKit
 
 class AddNewDeviceDataSource: NSObject, UITableViewDataSource {
     
-    var addNewDeviceCellId = "addNewDeviceCellId"
     var modelNameCellId = "modelNameCellId"
     var priceCell = "priceCell"
     var countCell = "countCell"
@@ -46,11 +45,8 @@ class AddNewDeviceDataSource: NSObject, UITableViewDataSource {
             return inputCountCell
         }
         
-        
         return UITableViewCell()
     }
-    
-    
-    
+
     
 }

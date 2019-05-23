@@ -24,6 +24,7 @@
 		B556D28D22723B20006073BD /* StoreFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556D28C22723B20006073BD /* StoreFrontView.swift */; };
 		B556D28F22723DDA006073BD /* StoreFrontTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556D28E22723DDA006073BD /* StoreFrontTableViewDataSource.swift */; };
 		B556D29322723F9A006073BD /* ModelLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556D29222723F9A006073BD /* ModelLabelTableViewCell.swift */; };
+		B5708FE9229458BD00B0241D /* RecordDataToSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5708FE8229458BD00B0241D /* RecordDataToSource.swift */; };
 		B57E6B7E22872873005E6F52 /* BackEndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E6B7D22872873005E6F52 /* BackEndTableViewCell.swift */; };
 		B5B8E2B82282EEA8005DD492 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B8E2B72282EEA8005DD492 /* CoreDataStack.swift */; };
 		B5B8E2BD2284FC73005DD492 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B8E2BC2284FC73005DD492 /* StorageManager.swift */; };
@@ -62,6 +63,7 @@
 		B556D28C22723B20006073BD /* StoreFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFrontView.swift; sourceTree = "<group>"; };
 		B556D28E22723DDA006073BD /* StoreFrontTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreFrontTableViewDataSource.swift; sourceTree = "<group>"; };
 		B556D29222723F9A006073BD /* ModelLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLabelTableViewCell.swift; sourceTree = "<group>"; };
+		B5708FE8229458BD00B0241D /* RecordDataToSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDataToSource.swift; sourceTree = "<group>"; };
 		B57E6B7D22872873005E6F52 /* BackEndTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackEndTableViewCell.swift; sourceTree = "<group>"; };
 		B5B8E2B72282EEA8005DD492 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B5B8E2BC2284FC73005DD492 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				B5C7714222773FFC00B537C2 /* Devices.json */,
 				B5C77144227742B500B537C2 /* DeviceModel.swift */,
 				B5C77146227744B000B537C2 /* ParseDataDevice.swift */,
+				B5708FE8229458BD00B0241D /* RecordDataToSource.swift */,
 				B5B8E2BE2285DCC1005DD492 /* DataModelDelegate.swift */,
 			);
 			path = Network;
@@ -421,6 +424,7 @@
 				B556D27D227234F8006073BD /* StoreFrontViewController.swift in Sources */,
 				B5B8E2BD2284FC73005DD492 /* StorageManager.swift in Sources */,
 				B57E6B7E22872873005E6F52 /* BackEndTableViewCell.swift in Sources */,
+				B5708FE9229458BD00B0241D /* RecordDataToSource.swift in Sources */,
 				B556D28D22723B20006073BD /* StoreFrontView.swift in Sources */,
 				B5082AC82287885B00504575 /* AddNewDeviceViewController.swift in Sources */,
 				B55307CA2280DE6700C7EBC9 /* BackEndTableViewDelegate.swift in Sources */,
