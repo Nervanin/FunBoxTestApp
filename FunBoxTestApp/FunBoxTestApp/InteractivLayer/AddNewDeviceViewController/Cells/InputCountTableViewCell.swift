@@ -18,7 +18,7 @@ class InputCountTableViewCell: UITableViewCell, ConfigureCell {
         
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        setUpTextField(contentView: contentView, textField: textField ?? UITextField())
+        setUpTextField(contentView: contentView, textField: textField)
     }
     
     required init?(coder aDecoder: NSCoder) {

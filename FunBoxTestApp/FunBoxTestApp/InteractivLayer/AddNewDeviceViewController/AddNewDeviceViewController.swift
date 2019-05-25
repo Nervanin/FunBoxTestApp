@@ -12,8 +12,6 @@ class AddNewDeviceViewController: UIViewController {
     
     var addNewDeviceView = AddNewDeviceView()
     
-    var test = String()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

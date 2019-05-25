@@ -11,7 +11,6 @@ import SnapKit
 
 class StoreFrontView: UIView {
     
-    //tableView and tableVeiwDelegate/tableViewDataSoursce
     var tableView = UITableView()
     var tableViewDataSourcee = StoreFrontTableViewDataSource()
     var tableViewDelegate = StoreFrontTableViewDelegate()

@@ -30,7 +30,6 @@ class AddNewDeviceDataSource: NSObject, UITableViewDataSource {
             return modelCell ?? UITableViewCell()
         } else if indexPath.row == 1 {
             let inputModelName = tableView.dequeueReusableCell(withIdentifier: inputModelCellId) as! InputModelNameTableViewCell
-            addNewDeviceVC.test = inputModelName.textField.text ?? "123"
             return inputModelName
         } else if indexPath.row == 2 {
             let priceCell = tableView.dequeueReusableCell(withIdentifier: self.priceCell)
